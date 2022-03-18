@@ -5,7 +5,7 @@ abstract class LoginState extends Equatable {
   final String password;
   final FormSubmissionStatus formStatus;
   
-  LoginState({
+  const LoginState({
     this.username = '',
     this.password = '',
     this.formStatus = const InitialFormStatus(),

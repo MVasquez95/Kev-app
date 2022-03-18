@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kev_app/pages/menu/menu.dart';
 
 class LoginPage extends StatefulWidget {
   static String id = 'login_page';
@@ -44,7 +45,12 @@ class _LoginPageState extends State<LoginPage> {
     return StreamBuilder(
         builder: (BuildContext context, AsyncSnapshot snapshot) {
       return ElevatedButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => const MenuPage()),
+          );
+        },
         child: Container(
           padding: const EdgeInsets.symmetric(horizontal: 80.0, vertical: 15.0),
           child: const Text('Iniciar sesión'),
