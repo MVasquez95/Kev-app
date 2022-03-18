@@ -1,9 +1,9 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatefulWidget {
   static String id = 'login_page';
+
+  const LoginPage({Key? key}) : super(key: key);
 
   @override
   State<LoginPage> createState() => _LoginPageState();
@@ -21,15 +21,15 @@ class _LoginPageState extends State<LoginPage> {
               Flexible(
                 child: Image.asset('logo.jpg', height: 200),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 15,
               ),
               _userTextField(),
-              SizedBox(
+              const SizedBox(
                 height: 15,
               ),
               _passwordTextField(),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               _bottonLogin(),
@@ -46,8 +46,8 @@ class _LoginPageState extends State<LoginPage> {
       return ElevatedButton(
         onPressed: () {},
         child: Container(
-          padding: EdgeInsets.symmetric(horizontal: 80.0, vertical: 15.0),
-          child: Text('Iniciar sesión'),
+          padding: const EdgeInsets.symmetric(horizontal: 80.0, vertical: 15.0),
+          child: const Text('Iniciar sesión'),
         ),
         style: ElevatedButton.styleFrom(
             shape: RoundedRectangleBorder(
@@ -60,11 +60,11 @@ class _LoginPageState extends State<LoginPage> {
     return StreamBuilder(
         builder: (BuildContext context, AsyncSnapshot snapshot) {
       return Container(
-        padding: EdgeInsets.symmetric(horizontal: 20.0),
+        padding: const EdgeInsets.symmetric(horizontal: 20.0),
         child: TextField(
           keyboardType: TextInputType.visiblePassword,
           obscureText: true,
-          decoration: InputDecoration(
+          decoration: const InputDecoration(
               icon: Icon(Icons.lock),
               hintText: 'Contraseña',
               labelText: 'Contraseña'),
@@ -78,10 +78,10 @@ class _LoginPageState extends State<LoginPage> {
     return StreamBuilder(
         builder: (BuildContext context, AsyncSnapshot snapshot) {
       return Container(
-        padding: EdgeInsets.symmetric(horizontal: 20.0),
+        padding: const EdgeInsets.symmetric(horizontal: 20.0),
         child: TextField(
           keyboardType: TextInputType.emailAddress,
-          decoration: InputDecoration(
+          decoration: const InputDecoration(
               icon: Icon(Icons.email),
               hintText: 'correo@gmail.com',
               labelText: 'Correo Electrónico'),
